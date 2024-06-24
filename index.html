@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <form
+      class="flex flex-col gap-4 items-center my-[95px]"
+      action="https://httpbin.org/post"
+      method="post"
+    >
+      <div class="flex flex-row">
+        <label class="cursor-pointer" for="first_name"><span class="text-red-600">* </span>First Name:</label>
+        <input
+          class="mx-2 shadow-lg text-red-700 w-[400px] h-7"
+          type="text"
+          id="first_name"
+          placeholder="Tony"
+          name="first_name"
+          required
+        />
+      </div>
+      <div class="flex flex-row">
+        <label class="cursor-pointer" for="last_name"><span class="text-red-600">* </span>Last Name:</label>
+        <input
+          type="text"
+          class="mx-2 shadow-lg text-red-700 w-[400px] h-7"
+          id="last_name"
+          placeholder="Stark"
+          name="last_name"
+          required
+        />
+      </div>
+      <div class="flex flex-row">
+        <label class="cursor-pointer mx-8" for="age">Age :</label>
+        <input
+          class="shadow-lg text-red-700 w-[400px] h-7 mx-8"
+          type="number"
+          id="age"
+          name="age"
+          value="0"
+          min="1"
+          max="20"
+        />
+        <!-- set min attribute 1 then you can't entervalue less than 1  -->
+      </div>
+      <div class="flex flex-row">
+        <label class="cursor-pointer" for="dob">Date of Birth :</label>
+        <input
+          class="mx-2 shadow-lg text-red-700 w-[400px] h-7"
+          type="date"
+          id="dob"
+          placeholder=""
+          name="dob"
+        />
+      </div>
+      <div class="flex flex-row">
+        <label class="cursor-pointer" for="tob">Time of Birth :</label>
+        <input
+          class="mx-2 shadow-lg text-red-700 w-[400px] h-7 time"
+          type="time"
+          id="tob"
+          placeholder=""
+          name="tob"
+          required
+        />
+      </div>
+      <div class="text-red-700 warntime text-bold relative right-[177px]">* Time is required</div>
+      <div class="flex flex-row password">
+        <label class="cursor-pointer" for="user_password"><span class="text-red-600">* </span>Password :</label>
+        <input
+          class="mx-2 shadow-lg text-red-700 w-[400px] h-7"
+          type="password"
+          id="user_password"
+          placeholder="Minimum 8 Chars"
+          name="user_password"
+          minlength="8"
+          required
+        />
+      </div>
+      <select class="w-[500px] h-10 cursor-pointer" name="fashion">
+        <optgroup label="Clothing">
+          <option value="t_shirt">T-Shirts</option>
+          <option value="sweater">Sweaters</option>
+          <option value="coats">Coats</option>
+        </optgroup>
+        <optgroup label="Foot Wear">
+          <option value="sneakers">Sneakers</option>
+          <option value="boots">Boots</option>
+          <option value="sandals">Sandals</option>
+        </optgroup>
+      </select>
+      
+      <select class="w-[500px] h-10 cursor-pointer" name="Car">
+        <option value="mercedes">Mercedes</option>
+        <option value="tesla">Tesla</option>
+        <option value="volvo" selected>Volvo</option>
+        <option value="bmw">BMW</option>
+        <option value="mini">Mini</option>
+        <option value="ford">Ford</option>
+      </select>  
+      <textarea class="shadow-lg w-[500px]" name="text" id="textarea" rows="8" maxlength="100">Some initial text</textarea>  
+      <div class="flex flex-row">  
+        <button class="w-[100px] bg-blue-600 text-white hover:bg-red-900 hover:text-yellow-300 mx-2" type="submit">Submit</button>
+        <button class="w-[100px] bg-blue-600 text-white hover:bg-red-900 hover:text-yellow-300 mx-2" 
+        type="reset">Reset</button>
+    </div>
+    </form>
+  </body>
+</html>
